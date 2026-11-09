@@ -100,8 +100,8 @@ STICKERS_IDS = (
 
 # boolean settings 
 GROUP_FSUB = is_enabled('GROUP_FSUB', False) 
-PM_SEARCH = is_enabled('PM_SEARCH', True) #switch True or False for searching results in bot pm😃
-IS_VERIFY = is_enabled('IS_VERIFY', False)
+PM_SEARCH = is_enabled('PM_SEARCH', False) #switch True or False for searching results in bot pm😃
+IS_VERIFY = is_enabled('IS_VERIFY', True)
 AUTO_DELETE = is_enabled('AUTO_DELETE', False)
 WELCOME = is_enabled('WELCOME', False)
 PROTECT_CONTENT = is_enabled('PROTECT_CONTENT', False)
@@ -116,7 +116,7 @@ SHORTLINK = is_enabled('SHORTLINK', True)
 PAYMENT_QR = environ.get('PAYMENT_QR', 'https://ibb.co/VWcyZDkv') #telegraph link of your QR code 
 UPI_ID = environ.get('UPI_ID', 'suryabm18@axl') # Add your upi id here
 # for stream
-IS_STREAM = is_enabled('IS_STREAM', False) #true if you want stream feature active in your bot
+IS_STREAM = is_enabled('IS_STREAM', True) #true if you want stream feature active in your bot
 BIN_CHANNEL = environ.get("BIN_CHANNEL", "") #if is_stream = true then add a channel id ex: -10026393639
 if len(BIN_CHANNEL) == 0:
     print('Error - BIN_CHANNEL is missing, exiting now')
