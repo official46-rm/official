@@ -65,14 +65,8 @@ async def give_filter(client, message):
         if not userid:
             await message.reply(to_small_caps("I'm not working for anonymous admin!"))
             return
-        if message.chat.id == SUPPORT_GROUP:
-            files, offset, total = await get_search_results(message.text)
-            if files:
-                btn = [[
-                    InlineKeyboardButton(to_small_caps("Here"), url=FILMS_LINK)
-                ]]
-                await message.reply_text(to_small_caps(f'Total {total} results found in this group'), reply_markup=InlineKeyboardMarkup(btn))
-            return
+        # SUPPORT_GROUP can also be the movie-search group.
+        # Do not stop at the old "Here" link; continue to normal auto-filter results.
             
         if message.text.startswith("/"):
             return
